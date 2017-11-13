@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         String sentence = this.userInput.getText().toString();
         Log.d(getClass().toString(), sentence);
         WordCounter wordCounter  = new WordCounter();
-        this.counter.setText(Integer.toString(wordCounter.count(toString(sentence)));
+        this.counter.setText(Integer.toString(wordCounter.count(sentence)));
     }
 
 }
