@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import codeclan.com.wordcounterhw.Models.InputString;
 import codeclan.com.wordcounterhw.Models.WordCounter;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,9 +30,10 @@ public class MainActivity extends AppCompatActivity {
     public void onButtonClicked(View button) {
         Log.d("MainActivity", "onButtonClicked");
         String sentence = this.userInput.getText().toString();
+        InputString inputString = new InputString(sentence);
         Log.d(getClass().toString(), sentence);
         WordCounter wordCounter  = new WordCounter();
-        this.counter.setText(Integer.toString(wordCounter.count(sentence)));
+        this.counter.setText(Integer.toString(wordCounter.count(inputString)));
     }
 
 }
